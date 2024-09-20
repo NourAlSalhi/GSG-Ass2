@@ -15,31 +15,31 @@ body {
   padding-top: 80px;
 }
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
   background-color: black;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 2000;
   height: 80px;
+  padding: 1rem 2rem;
 }
 nav h3 {
   color: white;
+  float: left;
+  margin-top: 0.5rem; 
 }
 h3 span {
   color: #ff6b81;
 }
 nav ul {
-  display: flex;
-  justify-content: space-between;
   list-style: none;
-  width: 50%;
+  float: right;
+  margin-top: 0.5rem;
+  width: 65%;
 }
 nav ul li {
-  margin-left: 1rem;
+  display: inline-block;
+  margin-left: 4rem;
 }
 nav ul li a {
   text-decoration: none;
@@ -56,26 +56,32 @@ nav button {
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 5px;
+  position: absolute; 
+  right: 2rem; 
+  top: 50%; 
+  transform: translateY(-50%);
 }
 nav button:hover {
   background-color: #ff4757;
 }
 .hero,
 .about {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
   margin-top: 100px;
+  text-align: left; 
+}
+.hero div {
+  display: inline-block; 
+  vertical-align: top;
+  max-width: 600px;
+  margin: 0 2rem; 
 }
 .img-hero {
   width: 300px;
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
-}
-.hero div {
-  max-width: 600px;
+  display: inline-block; 
+  margin: 0 auto;
 }
 .hero h2 {
   font-size: 2rem;
@@ -88,7 +94,6 @@ nav button:hover {
   line-height: 1.5;
   margin-bottom: 1rem;
 }
-
 .hero > div:first-child {
   width: 50%;
   border-radius: 10px;
@@ -104,9 +109,6 @@ nav button:hover {
   display: block;
 }
 .buttons-hero {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
   margin-top: 1rem;
 }
 .buttons-hero button {
@@ -116,10 +118,27 @@ nav button:hover {
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 5px;
+  margin: 0 10px;
 }
 .buttons-hero button:hover {
   background-color: #ff4757;
   transition: all 0.3s ease;
+}
+.about {
+  background-color: black;
+  padding: 2rem;
+}
+.about-me {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  margin: 0 auto; 
+}
+.about-word {
+  color: white;
+}
+.about-word span {
+  color: #ff6b81;
 }
 .about {
   background-color: black;
@@ -145,17 +164,15 @@ nav button:hover {
   bottom: 0;
   right: 0;
   background-color: #ff6b81;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  width: 25%;
+  width: 20%;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 300px;
 }
 .skills p {
   color: white !important;
+  display: inline-block;
+  margin-left: 10px;
 }
 .contact {
   width: 100%;
@@ -164,18 +181,18 @@ nav button:hover {
   background-size: 100px 50px;
   background-repeat: repeat;
   background-position: center;
+  text-align: center;
 }
 .form {
   margin: auto;
   width: fit-content;
   margin-top: 30px;
   margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 .form input,
 .form button {
+  display: block;
+  margin: 10px 0;
   width: 300px;
   padding: 10px;
 }
@@ -199,18 +216,17 @@ nav button:hover {
 .footer .socials {
   list-style: none;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+  display: inline;
   margin-top: 1rem;
 }
 .footer .socials li {
   display: inline-block;
+  margin-left: 1rem;
 }
 .footer .socials li a {
   color: #fff;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 12px;
   transition: color 0.3s;
 }
 .footer .socials li a:hover {
